@@ -44,8 +44,9 @@ class Game {
   getPlayers() {
     // const player1 = prompt('Please enter your name Player 1: ');
     // const player2 = prompt('Please enter your name Player 2: ');
-    const player1 = 'Richard'
-    const player2 = 'Khristin'
+
+    const player1 = 'Oliver'
+    const player2 = 'Sophie'
 
     this.player1 = new Player ({name: player1});
     this.player2 = new Player ({name: player2});
@@ -122,7 +123,7 @@ class Game {
 
       if(this.player1.hand.length > 0) {
         console.log(`${this.player1.name} won!`);
-      } else {
+      } else if(this.player2.hand.length > 0) {
         console.log(`${this.player2.name} won!`);
       }
     }
